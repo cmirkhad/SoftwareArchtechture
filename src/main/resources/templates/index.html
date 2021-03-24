@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+    <h1>Tracks</h1>
+    <a href="tracks">See tracks</a>
+    <form action="#" th:action="@{/}" method = "post" th:object="${track}">
+        <input type="text" th:field="*{title}">
+        <input type="text" th:field="*{author}">
+        <input type="number"  th:field="*{release}">
+        <input type="text" th:field="*{genre}">
+        <input type="text" th:field="*{submitter}">
+
+        <input type="submit" value="add track">
+
+    </form>
+</body>
+</html>
