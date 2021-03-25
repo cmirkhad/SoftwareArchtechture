@@ -39,7 +39,7 @@
             <label>Submitter by:    </label>
             <input type="text" th:value="${track.submitter}" step="any" name="submitter" ><br/>
             <label>Insert URL of the poster  </label>
-            <textarea name="poster"  th:value="${track.urlposter}"/><br/>
+            <textarea name="poster"  placeholder="Insert url of the image" th:text="${track.urlposter}"></textarea><br/>
 
             <button type="submit" class="btn btn-success" >Update</button>
 
