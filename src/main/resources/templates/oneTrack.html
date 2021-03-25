@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Tracks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="nvr :: nvr"></header>
+    <div class="container" th:object="${track}" >
+                <div class="row" >
+                    <div class="col" >
+                        <h1><span th:text="${track.title}"></span></h1>
+                    </div>
+                    <div class="col" >
+                        <form th:action="'/tracks/'+ ${track.id} + '/edit'" method="get">
+                            <button class="btn btn-success" type="submit">Edit</button>
+                        </form>
+                    </div>
+                    <div class="col" >
+                        <form th:action="'/tracks/'+ ${track.id} + '/delete'" method="post">
+                            <button class="btn btn-success" type="submit">Delete</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row justify-content-center" >
+                    <div class="col-12" >
+                        <h1><img th:src="${track.urlposter}" class="bd-placeholder-img card-img-top" width="300" height="300"></img></h1>
+                    </div>
+                </div>
+                <div class="row justify-content-end" >
+                    <div class="col-6" >
+                        <p><b>Author: </b> <span th:text="${track.author}"></span></p>
+                    </div>
+                </div>
+
+                <div class="row justify-content-start" >
+                    <div class="col-6" >
+                        <p><b>Genre: </b> <span th:text="${track.genre}"></span></p>
+                    </div>
+                </div>
+                <div class="row justify-content-start">
+                    <div class="col-6" >
+                        <p><b>Release date: </b> <span th:text="${track.release}"></span></p>
+                    </div>
+                </div>
+                <div class="row justify-content-end" >
+                    <div class="col-6" >
+                        <p><b>Submitted by: </b> <span th:text="${track.submitter}"></span></p>
+                    </div>
+                </div>
+
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>

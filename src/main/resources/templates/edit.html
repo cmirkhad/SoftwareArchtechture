@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style type="text/css">
+        label {
+            display: inline-block;
+            width: 200px;
+            margin: 5px;
+            text-align: left;
+        }
+        input[type=text], input[type=number] {
+            display: inline-block;
+            width: 200px;
+        }
+        i
+        button {
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header th:insert="nvr :: nvr"></header>
+
+    <div th:object="${track}"  align ="center">
+        <h1>Editing</h1>
+        <form th:action="'/tracks/'+ ${track.id} + '/edit'" method="post">
+            <label>Title: </label>
+            <input type="text" th:value="${track.title}" name="title"  ><br/>
+            <label>Author: </label>
+            <input name="author"   th:value="${track.author}"/><br/>
+            <label> Release date: </label>
+            <input type="number" th:value="${track.release}"  name="release"  ><br/>
+            <label>Genre: </label>
+            <input type="text" th:value="${track.genre}"  name="genre"  ><br/>
+            <label>Submitter by:    </label>
+            <input type="text" th:value="${track.submitter}" step="any" name="submitter" ><br/>
+            <label>Insert URL of the poster  </label>
+            <textarea name="poster"  th:value="${track.urlposter}"/><br/>
+            <button type="submit" class="btn btn-outline-success" >Update</button>
+
+        </form>
+    </div>
+</body>
+</html>

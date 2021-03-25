@@ -4,19 +4,44 @@
     <meta charset="UTF-8">
     <title>Adding track</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <style type="text/css">
+        label {
+            display: inline-block;
+            width: 200px;
+            margin: 5px;
+            text-align: left;
+        }
+        input[type=text], input[type=number] {
+            display: inline-block;
+            width: 200px;
+        }
+        i
+        button {
+            padding: 5px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <header th:insert="nvr :: nvr"></header>
-    <form action="#" th:action="@{/Adding}" method = "post" th:object="${track}">
-        <input type="text" th:field="*{title}">
-        <input type="text" th:field="*{author}">
-        <input type="number"  th:field="*{release}">
-        <input type="text" th:field="*{genre}">
-        <input type="text" th:field="*{submitter}">
-        <textarea type="text" th:field="*{urlposter}"></textarea>
+    <div  align ="center">
+        <form action="#" th:action="@{/Adding}" method = "post" th:object="${track}">
+            <label>Title: </label>
+            <input type="text" th:field="*{title}"><br/>
+            <label>Author: </label>
+            <input type="text" th:field="*{author}"><br/>
+            <label>Release date: </label>
+            <input type="number"   th:field="*{release}"><br/>
+            <label>Genre of the track: </label>
+            <input type="text" th:field="*{genre}"><br/>
+            <label>Submitted by: </label>
+            <input type="text" th:field="*{submitter}"><br/>
+            <label>Insert url of poster: </label>
+            <textarea type="text" th:field="*{urlposter}"></textarea><br/>
 
-        <input type="submit" value="add track" >
+            <input type="submit" value="add track" >
 
-    </form>
+        </form>
+    </div>
 </body>
 </html>

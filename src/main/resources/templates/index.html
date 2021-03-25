@@ -8,21 +8,22 @@
 <body>
 
     <header th:insert="nvr :: nvr"></header>
-    <h1>Tracklist</h1><a href="/">Refresh</a>
-    <a href="tracks">See tracks</a>
+
     <table class="table table-striped table-responsive-md">
         <thead>
         <tr>
-            <th>track title</th>
-            <th>author</th>
-            <th>release date</th>
+            <th>Track title</th>
+            <th>Author</th>
+            <th>Release date</th>
+            <th>See more about tracks</th>
         </tr>
         </thead>
         <tbody>
-        <tr th:each="track : ${alltracks}">
-            <td th:text="${track.title}"></td>
-            <td th:text="${track.author}"></td>
-            <td th:text="${track.release}"></td>
+        <tr th:each="trk : ${alltracks}">
+            <td th:text="${trk.title}"></td>
+            <td th:text="${trk.author}"></td>
+            <td th:text="${trk.release}"></td>
+            <td ><button  type="button"  class="btn btn-outline-success"><a th:href="'/tracks/'+${trk.id}" >View</a></button></td>
         </tr>
         </tbody>
     </table>

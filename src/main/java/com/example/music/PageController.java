@@ -16,24 +16,14 @@ public class PageController {
     public PageController(TrackRepository trackRepository) {
         this.trackRepository = trackRepository;
     }
-    @GetMapping
-    public String index(Model model) {
-        model.addAttribute("alltracks", trackRepository.findAll());
-        return "index";
-    }
+
     @GetMapping("/about")
     public String about(){
         return "about";
     }
-    @GetMapping("/Adding")
-    public String add(Model model){
-        model.addAttribute("track", new Track());
-        return "Adding";
+    @GetMapping("/API")
+    public String Api(){
+        return "API";
     }
-    @PostMapping("/Adding")
-    public String post(@ModelAttribute Track track, Model model){
-        model.addAttribute("track", track);
-        trackRepository.save(track);
-        return "index";
-    }
+
 }

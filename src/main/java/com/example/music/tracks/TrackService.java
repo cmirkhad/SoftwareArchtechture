@@ -16,6 +16,9 @@ public class TrackService {
     public List<Track> getAllTracks(){
         return trackRepository.findAll();
     }
+    public Track getTrackById(Long id){
+        return trackRepository.getOne(id);
+    }
     public void addNewTrack(Track track){
         trackRepository.save(track);
     }
@@ -27,7 +30,7 @@ public class TrackService {
         trackRepository.deleteById(trackId);
 
     }
-    public void updateTrack(Long trackId, String title, String author, int release, String genre, String submitter, String urlposter){
+    public void updateTrack(Long trackId, String title, String author, Integer release, String genre, String submitter, String urlposter){
         Track track = trackRepository.findById(trackId).
                 orElseThrow(() -> new IllegalStateException(
                         "track with id "+ trackId+" does not exist"));

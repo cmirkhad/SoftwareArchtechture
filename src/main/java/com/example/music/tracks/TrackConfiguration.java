@@ -7,6 +7,7 @@ public class TrackConfiguration {
     @Bean
     CommandLineRunner commandLineRunner(TrackRepository trackRepository){
         return args -> {
+
         };
     }
 }

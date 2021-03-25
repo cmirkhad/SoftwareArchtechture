@@ -21,15 +21,14 @@ public class Track {
     )
 
     private Long id;
-    @NonNull
+
     private String title;
 
     private String author;
-    @NonNull
-    private int release;
+    private Integer release;
 
     private String genre;
-    @NonNull
+
     private String submitter;
     private String urlposter;
 
@@ -41,7 +40,7 @@ public class Track {
         this.urlposter = urlposter;
     }
 
-    public Track(Long id, @NonNull String title, String author, int release, String genre, @NonNull String submitter, String urlposter) {
+    public Track(Long id, @NonNull String title, String author, Integer release, String genre, @NonNull String submitter, String urlposter) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -50,7 +49,7 @@ public class Track {
         this.submitter = submitter;
         this.urlposter = urlposter;
     }
-    public Track(@NonNull String title, String author, int release, String genre, @NonNull String submitter, String urlposter) {
+    public Track(@NonNull String title, String author, Integer release, String genre, @NonNull String submitter, String urlposter) {
         this.title = title;
         this.author = author;
         this.release = release;
@@ -87,11 +86,11 @@ public class Track {
         this.author = author;
     }
 
-    public int getRelease() {
+    public Integer getRelease() {
         return release;
     }
 
-    public void setRelease(int release) {
+    public void setRelease(Integer release) {
         this.release = release;
     }
 
