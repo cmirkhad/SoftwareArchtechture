@@ -17,15 +17,20 @@ public class PageController {
         this.trackRepository = trackRepository;
     }
     @GetMapping
-    public String main() {
-        return "index" ;
-    }
-    @GetMapping("/")
-    public String add(Model model){
-        model.addAttribute("track", new Track());
+    public String index(Model model) {
+        model.addAttribute("alltracks", trackRepository.findAll());
         return "index";
     }
-    @PostMapping("/")
+    @GetMapping("/about")
+    public String about(){
+        return "about";
+    }
+    @GetMapping("/Adding")
+    public String add(Model model){
+        model.addAttribute("track", new Track());
+        return "Adding";
+    }
+    @PostMapping("/Adding")
     public String post(@ModelAttribute Track track, Model model){
         model.addAttribute("track", track);
         trackRepository.save(track);

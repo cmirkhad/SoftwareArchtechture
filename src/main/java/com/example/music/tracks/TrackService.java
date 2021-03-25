@@ -27,7 +27,7 @@ public class TrackService {
         trackRepository.deleteById(trackId);
 
     }
-    public void updateTrack(Long trackId, String title, String author, int release, String genre, String submitter){
+    public void updateTrack(Long trackId, String title, String author, int release, String genre, String submitter, String urlposter){
         Track track = trackRepository.findById(trackId).
                 orElseThrow(() -> new IllegalStateException(
                         "track with id "+ trackId+" does not exist"));
@@ -45,6 +45,9 @@ public class TrackService {
         }
         if(submitter!=null && submitter.length()>0 && !Objects.equals(track.getSubmitter(), submitter)){
             track.setSubmitter(submitter);
+        }
+        if(urlposter!=null && urlposter.length()>0 && !Objects.equals(track.getUrlposter(), urlposter)){
+            track.setUrlposter(urlposter);
         }
     }
 

@@ -7,19 +7,19 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("tracks")
+@RequestMapping("/tracks")
 public class TrackController {
     private final TrackService trackService;
     @Autowired
     public TrackController(TrackService trackService) {
         this.trackService = trackService;
     }
-    @GetMapping()
+    @GetMapping("")
     public List<Track> getAllTrack(){
         return trackService.getAllTracks();
     }
 
-    @PostMapping
+    @PostMapping("")
     public void newTrack(@RequestBody @ModelAttribute Track track){
 
         trackService.addNewTrack(track);
@@ -38,10 +38,12 @@ public class TrackController {
             @RequestParam(required = false) String author,
             @RequestParam(required = false) int release,
             @RequestParam(required = false) String genre,
-            @RequestParam(required = false) String submitter
+            @RequestParam(required = false) String submitter,
+            @RequestParam(required = false) String urlposter
 
-            ){
-        trackService.updateTrack(trackId, title, author, release, genre, submitter);
+
+    ){
+        trackService.updateTrack(trackId, title, author, release, genre, submitter,urlposter);
     }
 
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Adding track</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <header th:insert="nvr :: nvr"></header>
+    <form action="#" th:action="@{/Adding}" method = "post" th:object="${track}">
+        <input type="text" th:field="*{title}">
+        <input type="text" th:field="*{author}">
+        <input type="number"  th:field="*{release}">
+        <input type="text" th:field="*{genre}">
+        <input type="text" th:field="*{submitter}">
+        <textarea type="text" th:field="*{urlposter}"></textarea>
+
+        <input type="submit" value="add track" th:href="@{/}">
+
+    </form>
+</body>
+</html>

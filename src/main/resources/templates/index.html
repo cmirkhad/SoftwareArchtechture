@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Tracks</h1>
+
+    <header th:insert="nvr :: nvr"></header>
+    <h1>Tracklist</h1><a href="/">Refresh</a>
     <a href="tracks">See tracks</a>
-    <form action="#" th:action="@{/}" method = "post" th:object="${track}">
-        <input type="text" th:field="*{title}">
-        <input type="text" th:field="*{author}">
-        <input type="number"  th:field="*{release}">
-        <input type="text" th:field="*{genre}">
-        <input type="text" th:field="*{submitter}">
+    <table class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>track title</th>
+            <th>author</th>
+            <th>release date</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="track : ${alltracks}">
+            <td th:text="${track.title}"></td>
+            <td th:text="${track.author}"></td>
+            <td th:text="${track.release}"></td>
+        </tr>
+        </tbody>
+    </table>
 
-        <input type="submit" value="add track">
 
-    </form>
+
 </body>
 </html>

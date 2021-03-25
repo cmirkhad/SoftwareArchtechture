@@ -31,20 +31,32 @@ public class Track {
     private String genre;
     @NonNull
     private String submitter;
-    public Track(Long id, @NonNull String title, String author, int release, String genre, @NonNull String submitter) {
+    private String urlposter;
+
+    public String getUrlposter() {
+        return urlposter;
+    }
+
+    public void setUrlposter(String urlposter) {
+        this.urlposter = urlposter;
+    }
+
+    public Track(Long id, @NonNull String title, String author, int release, String genre, @NonNull String submitter, String urlposter) {
         this.id = id;
         this.title = title;
         this.author = author;
         this.release = release;
         this.genre = genre;
         this.submitter = submitter;
+        this.urlposter = urlposter;
     }
-    public Track(@NonNull String title, String author, int release, String genre, @NonNull String submitter) {
+    public Track(@NonNull String title, String author, int release, String genre, @NonNull String submitter, String urlposter) {
         this.title = title;
         this.author = author;
         this.release = release;
         this.genre = genre;
         this.submitter = submitter;
+        this.urlposter = urlposter;
     }
     public Track(){
 
@@ -105,9 +117,10 @@ public class Track {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", author='" + author + '\'' +
-                ", release='" + release + '\'' +
+                ", release=" + release +
                 ", genre='" + genre + '\'' +
                 ", submitter='" + submitter + '\'' +
+                ", urlposter='" + urlposter + '\'' +
                 '}';
     }
 }
