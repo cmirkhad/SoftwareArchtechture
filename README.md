@@ -22,4 +22,4 @@ To delete track with DELETE(actually using POST): /tracks/trackId/delete
 ## Link to heroku
 [Application](https://trackapplication.herokuapp.com/)
 ## Markdown Tutorial
-[Tutorial](https://trackapplication.herokuapp.com/)
+[Tutorial](https://github.com/cmirkhad/MidtermMusicDataStorage/blob/master/tutorial.md)
