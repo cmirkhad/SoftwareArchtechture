@@ -3,7 +3,7 @@
 To make this project we should use Spring Boot with dependencies: Spring Data JPA, postgreSQL and Thymeleaf.<br>
 There should also have to be installed in our computer postgreSQL, maven and some IDE for work(IntellijIDEA .etc). Connection between Spring Boot and postgreSQL is done within terminal using Google. 
 #### Track classes
-Create Track class with fields id, title, author, release, genre, submitter, urlposter, then their setters and getters with toString method.<br>
+Create Track class ith fields id, title, author, release, genre, submitter, urlposter, then their setters and getters with toString method.<br>
 
 ![img2](https://user-images.githubusercontent.com/60456879/112560001-658dd100-8dfc-11eb-88c9-32d8263c78c6.png)<br>
 To create table track in database, we use the following lines:<br>
