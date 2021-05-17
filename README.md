@@ -1,4 +1,4 @@
-# MidtermMusicDataStorage
+# MusicDataStorage
 
 
 ## About
