@@ -21,6 +21,6 @@ To edit track with PUT(actually using POST): /tracks/trackId/edit<br>
 To delete track with DELETE(actually using POST): /tracks/trackId/delete
 ## Link to heroku
 [Application](https://trackapplication.herokuapp.com/)
-## Markdown Tutorial
-[Tutorial](https://github.com/cmirkhad/MidtermMusicDataStorage/blob/master/planning.md)
+## Planning of the project
+[Planning](https://github.com/cmirkhad/MidtermMusicDataStorage/blob/master/planning.md)
 
