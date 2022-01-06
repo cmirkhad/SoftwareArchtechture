@@ -10,7 +10,7 @@ To create table track in database, we use the following lines:<br>
 ![img1](https://user-images.githubusercontent.com/60456879/112560000-645ca400-8dfc-11eb-9c61-3baf646e63e6.png)<br>
 Configuration class for Track is following: <br>
 ![img3configurationtrack](https://user-images.githubusercontent.com/60456879/112560003-658dd100-8dfc-11eb-9053-a8c5a916aaaa.png)<br>
-Repository class for Track is following: <br>
+Repository class for Track is following: <br>.
 
 ![repositoryclass](https://user-images.githubusercontent.com/60456879/112560781-1648a000-8dfe-11eb-9ed3-4c28133ec1cb.png)<br>
 
