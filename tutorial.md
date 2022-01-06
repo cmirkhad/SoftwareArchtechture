@@ -1,4 +1,4 @@
-# Tutorial
+# Planning
 ### Start,  Backend
 To make this project we should use Spring Boot with dependencies: Spring Data JPA, postgreSQL and Thymeleaf.<br>
 There should also have to be installed in our computer postgreSQL, maven and some IDE for work(IntellijIDEA .etc). Connection between Spring Boot and postgreSQL is done within terminal using Google. 
