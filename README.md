@@ -2,7 +2,7 @@
 
 
 ## About
-The following application is a project for Back-End development and Data Structure courses. Project includes database with postgreSQL, REST API using String Boot Java. It has also several Data structure features, such as queues used.
+The following application is a project for Software Architechture course. Project includes database with postgreSQL, REST API using String Boot Java. It has also several Data structure features, such as queues used.
 The main purpose of the application is to store tracks from users(submitters) and provide possibility to listen to for all other users soon. <br> The idea of the application is pretty worn out, but, still, it has provided me a great opporitunity for developing my programming skills.<br>
 Main page: <br>
 
